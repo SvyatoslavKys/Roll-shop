@@ -157,7 +157,7 @@
 						<div class="cart-wrapper">
 
 							<!-- Cart item -->
-							<div class="cart-item" data-id="02">
+							<!-- <div class="cart-item" data-id="02">
 								<div class="cart-item__top">
 									<div class="cart-item__img">
 										<img src="img/roll/california-tempura.jpg" alt="">
@@ -166,8 +166,8 @@
 										<div class="cart-item__title">California tempura</div>
 										<div class="cart-item__weight">6 pcs. / 205g.</div>
 
-										<!-- cart-item__details -->
-										<div class="cart-item__details">
+										cart-item__details
+								           <div class="cart-item__details">
 
 											<div class="items items--small counter-wrapper">
 												<div class="items__control" data-action="minus">-</div>
@@ -180,11 +180,11 @@
 											</div>
 
 										</div>
-										<!-- // cart-item__details -->
+										// cart-item__details -->
 
-									</div>
+									<!-- </div>
 								</div>
-							</div>
+							</div> -->
 							<!-- // Cart item -->
 
 						</div>
@@ -193,18 +193,18 @@
 						<!-- Стоимость заказа -->
 						<div class="cart-total">
 							<p><span class="h5">Delivery:</span> <span class="delivery-cost free">for free</span> </p>
-							<p><span class="h5">Total:</span> <span class="total-price">330</span> <span class="rouble">$</span></p>
+							<p><span class="h5">Total:</span> <span class="total-price">0</span> <span class="rouble">$</span></p>
 						</div>
 						<!-- // Стоимость заказа -->
 
 					</div>
 
 					<!-- Оформить заказ -->
-					<div id="order-form" class="card-body border-top">
+					<div id="order-form" order-form class="card-body border-top none">
 						<h5 class="card-title">Place an order</h4>
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Your phone number">
+								<input type="number" class="form-control" placeholder="Your phone number">
 							</div>
 							<button type="submit" class="btn btn-primary">Order</button>
 						</form>
@@ -220,9 +220,11 @@
 	</div>
 
 	<!-- Подключаем скрипты -->
-	<script src="./js/counter-v02.js">
+	<script src="./js/calcKartPrice.js"></script>
+	<script src="./js/toggleCartStatus.js"></script>
+	<script src="./js/counter-v02.js"></script>
+	<script src="./js/cart-01.js"></script>
 
-	</script>
 </body>
 
 </html>

@@ -14,12 +14,22 @@ if  (event.target.dataset.action === 'plus' || event.target.dataset.action === '
 
          counter.innerText = ++counter.innerText;
     }
-    // является ли елемент кнопкой минус
+    // является ли елемент кнопкой минус и проверяем значение которое должно біть больше (1)
     if (event.target.dataset.action === 'minus'){
        
         if (parseInt(counter.innerText) > 1) {
 
             counter.innerText = --counter.innerText;
         }
+        // проверка для определения что товар лежит в корзине
+        else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1 ) {
+        //    console.log('INCARD');   
+                //  удалаем карту в которой выбрано значение меньше 1
+                event.target.closest('.cart-item').remove();
+                
+                toggleCartStatus();
+        }
+       
+    
     }
 });
