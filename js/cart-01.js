@@ -1,3 +1,4 @@
+const cartWrapper = document.querySelector('.cart-wrapper');
 
 const cartWrapper = document.querySelector('.cart-wrapper')
 // отслеживаем клик на странице
