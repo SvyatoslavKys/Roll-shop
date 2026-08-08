@@ -1,12 +1,12 @@
 
-// определяем по атрибуту тега нужную кнопку
+// Find the required buttons by their data attributes.
 const btnminus = document.querySelector('[data-action="minus"]');
 
 const btnplus = document.querySelector('[data-action="plus"]');
 
 const counter = document.querySelector('[data-counter]');
 
-// по кнопке минус отнимаем одно значение и в функциии (if ( parseInt(counter.innerText) > 1 )) определяем строку как число и проодим сравнение
+// Decrease the value while keeping the minimum quantity at one.
 
 btnminus.addEventListener(
     'click', function() { 
@@ -16,7 +16,7 @@ btnminus.addEventListener(
     }
     });
 
-    // по кнопке плюс добавляем значение в тег  с значением   counter
+    // Increase the counter value.
 
 btnplus.addEventListener('click', function() { 
        

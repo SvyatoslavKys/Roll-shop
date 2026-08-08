@@ -1,17 +1,21 @@
- function  toggleCartStatus() {
-    // console.log('toggleCartStatus');
-    const cartWraper = document.querySelector('.cart-wrapper');
-    // console.log(cartWraper.children.length);
-    const cartEmptyBedge = document.querySelector('[data-cart-empty]');
-    const orderForm = document.querySelector('[order-form]');
-    // console.log('cartWraper.children,lenght')
-    if (cartWraper.children.length > 0) {
-        // console.log('full');
-        cartEmptyBedge.classList.add('none');
-        orderForm.classList.remove('none');
-    } else {
-        // console.log('empty');
-        cartEmptyBedge.classList.remove('none');
-        orderForm.classList.add('none');
-    }
- }
+function toggleCartStatus(cart) {
+	'use strict';
+
+	const items = cart || window.RollShopCart.read();
+	const cartEmptyBadge = document.querySelector('[data-cart-empty]');
+	const cartTotal = document.querySelector('[data-cart-total]');
+	const orderForm = document.querySelector('[data-order-form]');
+	const hasItems = items.length > 0;
+
+	if (cartEmptyBadge) {
+		cartEmptyBadge.classList.toggle('none', hasItems);
+	}
+
+	if (orderForm) {
+		orderForm.classList.toggle('none', !hasItems);
+	}
+
+	if (cartTotal) {
+		cartTotal.classList.toggle('none', !hasItems);
+	}
+}

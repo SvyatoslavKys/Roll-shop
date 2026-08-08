@@ -1,35 +1,28 @@
-// проверяем клик на всем экране 
-window.addEventListener('click', function (event) {
-    // обьявление переменной для счетчика
-    let counter;
-    // проверяем по кнопкам плюс и минус
-if  (event.target.dataset.action === 'plus' || event.target.dataset.action === 'minus') {
-//    находим див обверткус в которой див с счетчиком
-    const counterWrapper = event.target.closest('.counter-wrapper');
-// находим див в котором сам счетчик
-     counter = counterWrapper.querySelector('[data-counter]');
-}
-    // проверяем является ли елемент кнопкой плюс
-    if (event.target.dataset.action === 'plus'){
+(function () {
+	'use strict';
 
-         counter.innerText = ++counter.innerText;
-    }
-    // является ли елемент кнопкой минус и проверяем значение которое должно біть больше (1)
-    if (event.target.dataset.action === 'minus'){
-       
-        if (parseInt(counter.innerText) > 1) {
+	document.addEventListener('click', function (event) {
+		const control = event.target.closest('[data-action]');
 
-            counter.innerText = --counter.innerText;
-        }
-        // проверка для определения что товар лежит в корзине
-        else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1 ) {
-        //    console.log('INCARD');   
-                //  удалаем карту в которой выбрано значение меньше 1
-                event.target.closest('.cart-item').remove();
-                
-                toggleCartStatus();
-        }
-       
-    
-    }
-});
+		if (!control || control.closest('.cart-wrapper')) {
+			return;
+		}
+
+		const counterWrapper = control.closest('.counter-wrapper');
+		const counter = counterWrapper && counterWrapper.querySelector('[data-counter]');
+
+		if (!counter) {
+			return;
+		}
+
+		const currentValue = Number(counter.textContent);
+
+		if (control.dataset.action === 'plus') {
+			counter.textContent = currentValue + 1;
+		}
+
+		if (control.dataset.action === 'minus' && currentValue > 1) {
+			counter.textContent = currentValue - 1;
+		}
+	});
+})();

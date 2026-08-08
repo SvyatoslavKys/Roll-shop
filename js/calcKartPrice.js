@@ -1,12 +1,15 @@
-function calcCartPrice() {
-    const cartItems = document.querySelectorAll('.cart-item');
-    console.log('cartItems');
+function calcCartPrice(cart) {
+	'use strict';
 
-    cartItems.forEach(function (item){
+	const items = cart || window.RollShopCart.read();
+	const total = items.reduce(function (sum, item) {
+		return sum + Number(item.price) * Number(item.quantity);
+	}, 0);
+	const totalPriceElement = document.querySelector('.total-price');
 
-        const amountel = item.querySelector('[data-couner]');
-        const priceel = item.querySelector('price__currency');
-        const currentPrice = parseInt(amountel.innerText) * parseInt(priceel.innerText);
-        console.log(currentPrice);
+	if (totalPriceElement) {
+		totalPriceElement.textContent = total.toLocaleString('pl-PL');
+	}
 
-    })}
+	return total;
+}

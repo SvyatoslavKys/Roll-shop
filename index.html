@@ -4,227 +4,139 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Roll shop</title>
+	<meta name="description" content="Roll Shop — fresh rolls with fast delivery.">
+	<title>Roll Shop — roll delivery</title>
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
 </head>
 
 <body>
-
-	<header class="header">
-		<div class="container text-center">
-			<img src="img/logo/logo.svg" width="92" alt="Rolls">
-			<div class="display-4">Roll delivery</div>
-			<p class="lead">Prompt and tasty</p>
+	<header class="site-header">
+		<div class="container">
+			<nav class="site-nav" aria-label="Main navigation">
+				<a class="site-brand" href="index.html">
+					<img src="img/logo/logo.svg" width="52" height="52" alt="Roll Shop logo">
+					<span>Roll Shop</span>
+				</a>
+				<div class="site-nav__links">
+					<a class="active" href="index.html" aria-current="page">Home</a>
+					<a href="catalog.html">Menu</a>
+					<a href="catalog.html#cart">Cart <span class="cart-badge" data-cart-count>0</span></a>
+				</div>
+			</nav>
 		</div>
 	</header>
 
-	<div class="container mb-5">
-		<div class="row">
-			<div class="col-md-8">
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 hero__content">
+						<span class="eyebrow">Fresh rolls every day</span>
+						<h1>Your favourite rolls delivered to your door</h1>
+						<p class="lead">We prepare every meal to order, pack it carefully and deliver hot dishes hot and cold dishes fresh.</p>
+						<div class="hero__actions">
+							<a class="btn btn-warning btn-lg" href="catalog.html">View menu</a>
+							<a class="text-link" href="#delivery">Delivery details</a>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<div class="hero__image-wrap">
+							<img class="hero__image" src="img/roll/philadelphia.jpg" alt="Philadelphia roll">
+							<div class="hero__note">Free delivery</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="section-heading text-center">
+					<span class="eyebrow">Why choose us</span>
+					<h2>Simple and delicious</h2>
+				</div>
 				<div class="row">
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="01">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Philadelphia hit roll</h4>
-								<p><small data-items-in-box class="text-muted">6 pcs.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">180g.</div>
-										<div class="price__currency">300 $</div>
-									</div>
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ add to cart</button>
-
-							</div>
+					<div class="col-md-4 mb-4">
+						<div class="feature-card">
+							<div class="feature-card__icon" aria-hidden="true">01</div>
+							<h3>Fresh ingredients</h3>
+							<p>We use fresh fish and vegetables, and start preparing your meal only after you place an order.</p>
 						</div>
 					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="02">
-							<img class="product-img" src="img/roll/california-tempura.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">California tempura</h4>
-								<p><small data-items-in-box class="text-muted">6 pcs.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">205g.</div>
-										<div class="price__currency">250 $</div>
-									</div>
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ add to cart</button>
-
-							</div>
+					<div class="col-md-4 mb-4">
+						<div class="feature-card">
+							<div class="feature-card__icon" aria-hidden="true">02</div>
+							<h3>Fast delivery</h3>
+							<p>We prepare your order without unnecessary waiting and deliver it carefully to your door.</p>
 						</div>
 					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="03">
-							<img class="product-img" src="img/roll/zapech-california.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Baked California roll</h4>
-								<p><small data-items-in-box class="text-muted">6 pcs.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">182g.</div>
-										<div class="price__currency">230 $</div>
-									</div>
-
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ add to cart</button>
-
-							</div>
+					<div class="col-md-4 mb-4">
+						<div class="feature-card">
+							<div class="feature-card__icon" aria-hidden="true">03</div>
+							<h3>Easy ordering</h3>
+							<p>Choose the quantity, add rolls to your cart and place your order in just a few minutes.</p>
 						</div>
 					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="04">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Philadelphia</h4>
-								<p><small data-items-in-box class="text-muted">6 шт.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">230g.</div>
-										<div class="price__currency">320 $</div>
-									</div>
-
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">
-									+ add to cart
-								</button>
-
-							</div>
-						</div>
-					</div>
-					<!-- // Ролл -->
-
 				</div>
 			</div>
-			<div class="col-md-4">
+		</section>
 
-				<!-- Корзина -->
-				<div class="card mb-4">
-					<div class="card-body">
-						<h5 class="card-title">Your order</h4>
-						<div data-cart-empty class="alert alert-secondary" role="alert">
-							Cart is empty
-						</div>
-						<!-- cart-wrapper -->
-						<div class="cart-wrapper">
-
-							<!-- Cart item -->
-							<!-- <div class="cart-item" data-id="02">
-								<div class="cart-item__top">
-									<div class="cart-item__img">
-										<img src="img/roll/california-tempura.jpg" alt="">
-									</div>
-									<div class="cart-item__desc">
-										<div class="cart-item__title">California tempura</div>
-										<div class="cart-item__weight">6 pcs. / 205g.</div>
-
-										cart-item__details
-								           <div class="cart-item__details">
-
-											<div class="items items--small counter-wrapper">
-												<div class="items__control" data-action="minus">-</div>
-												<div class="items__current" data-counter="">1</div>
-												<div class="items__control" data-action="plus">+</div>
-											</div>
-
-											<div class="price">
-												<div class="price__currency">250 $</div>
-											</div>
-
-										</div>
-										// cart-item__details -->
-
-									<!-- </div>
-								</div>
-							</div> -->
-							<!-- // Cart item -->
-
-						</div>
-						<!-- // cart-wrapper -->
-
-						<!-- Стоимость заказа -->
-						<div class="cart-total">
-							<p><span class="h5">Delivery:</span> <span class="delivery-cost free">for free</span> </p>
-							<p><span class="h5">Total:</span> <span class="total-price">0</span> <span class="rouble">$</span></p>
-						</div>
-						<!-- // Стоимость заказа -->
-
+		<section class="section section--muted">
+			<div class="container">
+				<div class="section-heading section-heading--row">
+					<div>
+						<span class="eyebrow">Customer favourites</span>
+						<h2>Popular rolls</h2>
 					</div>
-
-					<!-- Оформить заказ -->
-					<div id="order-form" order-form class="card-body border-top none">
-						<h5 class="card-title">Place an order</h4>
-						<form>
-							<div class="form-group">
-								<input type="number" class="form-control" placeholder="Your phone number">
-							</div>
-							<button type="submit" class="btn btn-primary">Order</button>
-						</form>
-					</div>
-					<!-- // Оформить заказ -->
-
+					<a class="text-link" href="catalog.html">Full menu →</a>
 				</div>
-				<!-- // Корзина -->
-
-
+				<div class="row">
+					<div class="col-md-4 mb-4">
+						<a class="preview-card" href="catalog.html">
+							<img src="img/roll/philadelphia.jpg" alt="Philadelphia Hit">
+							<span class="preview-card__body"><strong>Philadelphia Hit</strong><small>6 pcs. · 180 g</small></span>
+						</a>
+					</div>
+					<div class="col-md-4 mb-4">
+						<a class="preview-card" href="catalog.html">
+							<img src="img/roll/california-tempura.jpg" alt="California Tempura">
+							<span class="preview-card__body"><strong>California Tempura</strong><small>6 pcs. · 205 g</small></span>
+						</a>
+					</div>
+					<div class="col-md-4 mb-4">
+						<a class="preview-card" href="catalog.html">
+							<img src="img/roll/zapech-california.jpg" alt="Baked California">
+							<span class="preview-card__body"><strong>Baked California</strong><small>6 pcs. · 182 g</small></span>
+						</a>
+					</div>
+				</div>
 			</div>
+		</section>
+
+		<section class="section" id="delivery">
+			<div class="container">
+				<div class="delivery-panel">
+					<div>
+						<span class="eyebrow">Delivery</span>
+						<h2>Free and careful delivery</h2>
+						<p>Leave your contact details at checkout. We will call you to confirm the address and a convenient delivery time.</p>
+					</div>
+					<a class="btn btn-outline-warning" href="catalog.html">Build your order</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container site-footer__content">
+			<span>© Roll Shop</span>
+			<span>Educational roll delivery project</span>
 		</div>
-	</div>
+	</footer>
 
-	<!-- Подключаем скрипты -->
-	<script src="./js/calcKartPrice.js"></script>
-	<script src="./js/toggleCartStatus.js"></script>
-	<script src="./js/counter-v02.js"></script>
-	<script src="./js/cart-01.js"></script>
-
+	<script src="js/cart-storage.js"></script>
 </body>
 
 </html>
